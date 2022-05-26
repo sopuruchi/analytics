@@ -1,0 +1,13 @@
+select * 
+from "yellow_tripdata_2016-03"
+limit 1;
+
+-- QUESTION ONE
+select avg("passenger_count") as "avg_number_of_trips_on_saturday"
+from "yellow_tripdata_2015-01"
+where extract(isodow from tpep_pickup_datetime) in (7);
+
+-- QUESTION TWO
+select avg("fare_amount") as "avg_fare_on_saturday"
+from "yellow_tripdata_2015-01"
+where extract(isodow from tpep_pickup_datetime) in (7);
